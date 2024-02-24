@@ -1,0 +1,29 @@
+digraph Tree {
+node [shape=box, style="filled", color="black", fontname="helvetica"] ;
+edge [fontname="helvetica"] ;
+0 [label="Влажность <= 0.5\ngini = 0.459\nsamples = 14\nvalue = [9, 5]\nclass = Да", fillcolor="#f3c7a7"] ;
+1 [label="Наблюдение <= 1.5\ngini = 0.49\nsamples = 7\nvalue = [3, 4]\nclass = Нет", fillcolor="#cee6f8"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label="Ветер <= 0.5\ngini = 0.375\nsamples = 4\nvalue = [3, 1]\nclass = Да", fillcolor="#eeab7b"] ;
+1 -> 2 ;
+3 [label="Наблюдение <= 0.5\ngini = 0.5\nsamples = 2\nvalue = [1, 1]\nclass = Да", fillcolor="#ffffff"] ;
+2 -> 3 ;
+4 [label="gini = 0.0\nsamples = 1\nvalue = [0, 1]\nclass = Нет", fillcolor="#399de5"] ;
+3 -> 4 ;
+5 [label="gini = 0.0\nsamples = 1\nvalue = [1, 0]\nclass = Да", fillcolor="#e58139"] ;
+3 -> 5 ;
+6 [label="gini = 0.0\nsamples = 2\nvalue = [2, 0]\nclass = Да", fillcolor="#e58139"] ;
+2 -> 6 ;
+7 [label="gini = 0.0\nsamples = 3\nvalue = [0, 3]\nclass = Нет", fillcolor="#399de5"] ;
+1 -> 7 ;
+8 [label="Наблюдение <= 0.5\ngini = 0.245\nsamples = 7\nvalue = [6, 1]\nclass = Да", fillcolor="#e9965a"] ;
+0 -> 8 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+9 [label="Ветер <= 0.5\ngini = 0.444\nsamples = 3\nvalue = [2, 1]\nclass = Да", fillcolor="#f2c09c"] ;
+8 -> 9 ;
+10 [label="gini = 0.0\nsamples = 1\nvalue = [0, 1]\nclass = Нет", fillcolor="#399de5"] ;
+9 -> 10 ;
+11 [label="gini = 0.0\nsamples = 2\nvalue = [2, 0]\nclass = Да", fillcolor="#e58139"] ;
+9 -> 11 ;
+12 [label="gini = 0.0\nsamples = 4\nvalue = [4, 0]\nclass = Да", fillcolor="#e58139"] ;
+8 -> 12 ;
+}
